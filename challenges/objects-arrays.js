@@ -146,3 +146,4 @@ Stretch: If you haven't already, convert your array method callbacks into arrow 
 
 */
 
+// wrote the array methods with ES6 (arrow function)
