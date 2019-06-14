@@ -29,14 +29,51 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. Describe the biggest difference between `.forEach` & `.map`.
+    - `.forEach()` doesn't return a new array, like `.map()` so you have to add more function to `.forEach()` such as push each items to a new array or simply `console.log()` it.
+    - Use `.map()` when you want to do the same operation on each of the elements in the array and return the same amount of items in the array, 
+
 
 2. What is the difference between a function and a method?
+    - Function is a set of code to do some task in JavaScript.
+        - When you define a function, it is also automatically being attached to the global objet (`window`), you can run the function like this
+        ```js
+        function helloLambda() {
+            console.log("Hello, Lambda School!");
+        }
+        window.helloLambda();
+        ```
+        - Meaning that function is a method of the window object.
+
+    - Method is also a function which is used as a property inside Object. And a mehtod has access to the data present in its Construction function.
+
 
 3. What is closure?
+    - A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
+        - To use a closure, simply define a function inside another function and expose it. To expose a function, return it or pass it to another function.
+        - The inner function will have access to the variables in the outer function scope, even after the outer function has returned.
+
 
 4. Describe the four rules of the 'this' keyword.
+    1. **Global binding (Window binding)**
+        - `this` will be the window/console Object when `this` is not used for the other 3 cases and using `this` might give you an error.
+        - Window binding is like the forest of trees, not sure which one we are pointing at, so we point at the forest. (by Josh Knell)
+
+    2. **Implicit Binding**
+        - When `this` is called at left of the dot (.), whatever is to the left of the dot becomes the context for `this` in the function.
+
+    3. **New Binding**
+        - When `this` is used with a constructor and the `new` keyword, `this` will be the new object being constructed.
+        - Variable name starts with capital letter.
+
+    4. **Explicit binding**
+        - `When you use .call(), .apply(), or .bind() method, `this` is explicitly defined.
+        - It is called explicit because you are explicitly passing in a this context to the methods.
+
 
 5. Why do we need super() in an extended class?
+    - The `super()` keyword is used as a “function” which calls the parent class with the parameters passed to the child class. This is a key step to be carried out in order to make sure that the child class is an instance of the parent class.
+    - `super()` is also used to call the methods of the parent class.
+
 
 ## Project Set up
 
